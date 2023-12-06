@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+</head>
+<body>
+    <section class="sec1">
+        <h2 id="text">Seasons Of India</h2>
+        <img src="./images/mountain1.png" alt="" id="layer1">
+        <img src="./images/mountain2.png" alt="" id="layer2">
+    </section>
+    <section class="content">
+        <h2>Winter</h2>
+        <p>Winter is one of the most important seasons in India. It is a part of the four seasons that occur in India. Winters are the coolest season that starts from December and last till March. The peak time when winter is experienced the most in December and January. In India, winters hold great importance. In addition, the essence it has is admired by many people. Winters give you the time to indulge in various activities like snowball fighting, building snowmen, ice hockey and more. It is a great time for kids to enjoy their vacations and get cozy in their blankets.
+            Winter season is a very cold season of the year in India. It starts after the autumn season and finishes on the arrival of spring season. We feel huge level of changes in the atmosphere in the winter season in comparison to the other seasons of the year. Atmospheric temperature becomes very low, cold winds blow in high speed, day becomes short and night becomes long, etc. Sometimes, we do not see sunlight because of the thick clouds in the sky however on other winter days sky looks very clear and blue. Atmosphere becomes very dry however dusty. Sunlight of the winter season becomes very very mild and light warm. It creates much problem in drying the wet clothes all through the winter. It is a season of healthy and favorite fruits orange, guava, chickoo, papaya, amla, carrot, beetroot, grapes, etc.
+        </p>
+    </section>
+    <div class="pimg2">
+        <div class="ptext">
+            <span class="border">
+                Autum
+            </span>
+        </div>
+    </div>
+    <section class="content">
+       <h2>Autum</h2>
+       <p>Autumn, season of the year between summer and winter during which temperatures gradually decrease. It is often called fall in the United States because leaves fall from the trees at that time. Autumn is usually defined in the Northern Hemisphere as the period between the autumnal equinox (day and night equal in length), September 22 or 23, and the winter solstice (year’s shortest day), December 21 or 22; and in the Southern Hemisphere as the period between March 20 or 21 and June 21 or 22. The autumn temperature transition between summer heat and winter cold occurs only in middle and high latitudes; in equatorial regions, temperatures generally vary little during the year. In the polar regions autumn is very short. For physical causes of the seasons, see season.
+
+       </p>
+    </section>
+
+    <div class="pimg3">
+        <div class="ptext">
+            <span class="border">
+                Spring
+            </span>
+        </div>
+    </div>
+    <section class="content">
+        <h2>Spring</h2>
+        <p>Spring season is a pleasing season of everyone. Spring season in India falls during the months of March, April and May. It comes after a long three months of winter season during which people feel relief from the winter cold. In the spring season temperature become moderate and everywhere looks green and colorful because of the blooming trees and flowers. After a long wait, finally time comes when we start wearing lighter clothes and can go outside the door more often. Small children do kite flying. Holi festival falls in the starting of this season when everyone fully enjoy the coming of spring by playing holi with colors and water.</p>
+    </section>
+
+    <div class="pimg4">
+        <div class="ptext">
+            <span class="border">
+                Monsoon
+            </span>
+        </div>
+    </div>
+
+    <section class="content">
+        <h2>Monsoon</h2>
+        <p>The summer monsoon is associated with heavy rainfall. It usually happens between April and September. As winter ends, warm, moist air from the southwest Indian Ocean blows toward countries like India, Sri Lanka, Bangladesh, and Myanmar. The summer monsoon brings a humid climate and torrential rainfall to these areas.
+
+            India and Southeast Asia depend on the summer monsoon. Agriculture, for example, relies on the yearly rain. Many areas in these countries do not have large irrigation systems surrounding lakes, rivers, or snowmelt areas. Aquifers, or supplies of underground water, are shallow. The summer monsoon fills wells and aquifers for the rest of the year. Rice and tea are some crops that rely on the summer monsoon. Dairy farms, which help make India the largest milk producer in the world, also depend on the monsoon rains to keep cows healthy and well-fed.</p>
+    </section>
+</body>
+<script>
+    var layer1=document.getElementById('layer1');
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',
+    function(e){
+        var offset =window.pageYOffset;
+        scroll = offset;
+        layer1.style.width =(100+ scroll) + '%';
+    });
+
+    var layer2=document.getElementById('layer2');
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',
+    function(e){
+        var offset =window.pageYOffset;
+        scroll = offset;
+        layer2.style.width =(100+ scroll/5) + '%';
+        layer2.style.left = scroll/50 + '%';
+
+    });
+
+    var text=document.getElementById('text');
+    scroll = window.pageYOffset;
+    document.addEventListener('scroll',
+    function(e){
+        var offset =window.pageYOffset;
+        scroll = offset;
+        // text.style.width =(100+ scroll/5) + '%';
+        text.style.top = -scroll/20 + '%';
+
+    });
+</script>
+</html>

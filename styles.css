@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.sec1{
+    width: 100%;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    background: url('./images/bg.jpg');
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.sec1 h2{
+    color: #fff;
+    position: absolute;
+    font-size: 5rem;
+    /* bottom: -40px; */
+}
+
+.sec1:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 1000;
+    background: linear-gradient(transparent,#fff);
+}
+
+.sec1 #layer1{
+    width: 100%;
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.sec1 #layer2{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+}
+
+.content{
+    padding: 100px;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+.pimg2,.pimg3{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+    /* fixed = parallax 
+     scroll=normal */
+}
+
+.pimg2{
+    background-image: url('https://img.freepik.com/premium-photo/colorful-autumn-landscape_130291-2270.jpg');
+    min-height: 400px;
+}
+
+.pimg3{
+    /* background-image: url('https://www.treesforcities.org/imager/images/90552/pexels-elia-clerici-2004630_0fdd18ba2bf4890d64d12902ca97caa6.jpg'); */
+    background-image: url('https://www.befunky.com/images/wp/wp-2023-02-cherry-blossoms.jpg?auto=avif,webp&format=jpg&width=944');
+    min-height: 400px;
+}
+
+.pimg4{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/029/771/613/large_2x/epicgraphy-shot-of-rainy-season-background-enjoying-nature-rainfall-and-happy-life-concept-generative-ai-free-photo.jpeg');
+    min-height: 600px;
+    background-size: cover;
+}
